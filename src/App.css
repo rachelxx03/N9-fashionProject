@@ -1,5 +1,51 @@
+.navigation:hover {
+  border-bottom: 2px solid ;
+}
+
+.navigation.active {
+  border-bottom: 2px solid ;
+}
+
+
+.navop:hover {
+  border-bottom: 2px solid ;
+}
+
+
+.navop  {
+  font-weight: 600;
+  font-size:4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+
+.navigation  {
+  padding: 0;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  text-decoration: none
+}
+.footer {
+  padding-bottom: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: black;
+  list-style-type: none;
+
+
+}
+.App{
+
+}
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -35,4 +81,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* .MuiTableCell-root{border-bottom: none !important; }  */
+
+.rimg{
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.pageContent{
+ 
+  padding-top: 1rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+
+}
+.contacts{
+
+  color:black;
+  font-size: medium;
 }
