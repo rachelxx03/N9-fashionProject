@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/N9-fashionProject/static/css/main.f31a74c6.css",
-    "main.js": "/N9-fashionProject/static/js/main.749f947e.js",
+    "main.js": "/N9-fashionProject/static/js/main.d78d2cc7.js",
     "static/js/787.01bfcb32.chunk.js": "/N9-fashionProject/static/js/787.01bfcb32.chunk.js",
     "static/media/gocnhin.png": "/N9-fashionProject/static/media/gocnhin.a63fd2087e371e7a3215.png",
     "static/media/menu_background.png": "/N9-fashionProject/static/media/menu_background.1181761fe2c827eac91b.png",
@@ -10,11 +10,11 @@
     "static/media/xu_huong.png": "/N9-fashionProject/static/media/xu_huong.77ff7bdf49561e74d815.png",
     "index.html": "/N9-fashionProject/index.html",
     "main.f31a74c6.css.map": "/N9-fashionProject/static/css/main.f31a74c6.css.map",
-    "main.749f947e.js.map": "/N9-fashionProject/static/js/main.749f947e.js.map",
+    "main.d78d2cc7.js.map": "/N9-fashionProject/static/js/main.d78d2cc7.js.map",
     "787.01bfcb32.chunk.js.map": "/N9-fashionProject/static/js/787.01bfcb32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f31a74c6.css",
-    "static/js/main.749f947e.js"
+    "static/js/main.d78d2cc7.js"
   ]
 }
