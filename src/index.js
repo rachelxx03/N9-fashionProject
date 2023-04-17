@@ -7,6 +7,10 @@ import  ContactPage from './pages/contact';
 import  OutlookPage from './pages/outlook';
 import  TrendPage from './pages/trend';
 import  AdminPage from './pages/admin';
+import  TestPage from './pages/test';
+import  DetailPage from './pages/detail';
+
+
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -20,34 +24,50 @@ import App from './App';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/N9-fashionProject",
     element: <App/>,
   },
   {
-    path: "/outlook",
+    path: "/N9-fashionProject/outlook/*",
     element: <OutlookPage/>,
   },
   {
-    path: "/trend",
+    path: "/N9-fashionProject/trend/*",
     element: <TrendPage/>,
   },
   {
-    path: "/contact",
+    path: "/N9-fashionProject/contact",
     element: <ContactPage/>,
   },
   {
-    path: "/admin",
+    path: "/N9-fashionProject/admin",
     element: <AdminPage/>,
   },
+  {
+    path: "/N9-fashionProject/test",
+    element: <TestPage/>,
+  },
+  {
+    path: "/N9-fashionProject/detail/*",
+    element: <DetailPage/>,
+  },
+  {
+    basename:"/N9-fashionProject"
+  }
 ]);
 
 
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
+const basename = '/N9-fashionProject';
+
 
 root.render(
-  <RouterProvider router= {router}/>
+  // <RouterProvider router= {router}   basename={basename}/>
+  <RouterProvider router={router} basename={basename}>
+  <App />
+</RouterProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

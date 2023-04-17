@@ -13,10 +13,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const links = [
-    { navId: "menu", name: 'TRANG CHỦ', url: '/' },
-    { navId: "xuhuong", name: 'XU HƯỚNG', url: '/trend' },
-    { navId: "gocnhin", name: 'GÓC NHÌN', url: '/outlook' },
-    { navId: "lienhe", name: 'LIÊN HỆ / ĐÓNG GÓP', url: '/contact' },
+    { navId: "menu", name: 'TRANG CHỦ', url: '/N9-fashionProject' },
+    { navId: "xuhuong", name: 'XU HƯỚNG', url: '/N9-fashionProject/trend' },
+    { navId: "gocnhin", name: 'GÓC NHÌN', url: '/N9-fashionProject/outlook' },
+    { navId: "lienhe", name: 'LIÊN HỆ / ĐÓNG GÓP', url: '/N9-fashionProject/contact' },
 
 
 ];

@@ -1,6 +1,5 @@
 
 
-import React from "react";
 import { AppBar, Typography, Box, Grid, Paper, styled } from '@mui/material';
 import NavigationBar from "../NavigationBar/navigationBar";
 import Card from "../reusableComponent/ui-card ";
@@ -9,19 +8,27 @@ import { useMediaQuery } from "react-responsive";
 import Background from "../image/gocnhin.png"
 
 
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 
 function Outlook() {
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 900px)" });
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/content?catagory=1')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
+
 
 
   return (
@@ -51,15 +58,14 @@ function Outlook() {
             placeItems: "center"
           }}
           >
-            <Grid style={{padding:"1rem"}} md={4}>
+                  {data.map(item => (
+                  <Card key={item.id} item={item} />
+
+            ))}
+              {/* <Card />
+          
               <Card />
-            </Grid>
-            <Grid style={{padding:"1rem"}} md={4}>
-              <Card />
-            </Grid>
-            <Grid  style={{padding:"1rem"}} md={4}>
-              <Card />
-            </Grid>
+              <Card /> */}
           </Grid>
         </Box>
 
