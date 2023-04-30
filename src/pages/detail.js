@@ -23,7 +23,6 @@ function Detail() {
         setId(id);
     }, [location.search]);
     let request = `http://localhost:8000/api/getDetail?id=${id}`;
-    console.log(request); // construct the API request URL with the id value
     const [data, setData] = useState([]);
     
     

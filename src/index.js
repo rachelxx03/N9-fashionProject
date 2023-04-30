@@ -4,11 +4,15 @@ import reportWebVitals from './reportWebVitals';
 
 import * as React from 'react';
 import  ContactPage from './pages/contact';
+import  ShowAllPage from './pages/showAllPost';
+
 import  OutlookPage from './pages/outlook';
 import  TrendPage from './pages/trend';
 import  AdminPage from './pages/admin';
 import  TestPage from './pages/test';
 import  DetailPage from './pages/detail';
+import  AdminFixPage from './pages/AdminFix';
+
 
 
 
@@ -50,6 +54,14 @@ const router = createBrowserRouter([
   {
     path: "/N9-fashionProject/detail/*",
     element: <DetailPage/>,
+  },
+  {
+    path: "/N9-fashionProject/showAll",
+    element: <ShowAllPage/>,
+  },
+  {
+    path: "/N9-fashionProject/FixAdmin/*",
+    element: <AdminFixPage/>,
   },
   {
     basename:"/N9-fashionProject"
