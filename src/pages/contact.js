@@ -93,7 +93,7 @@ const Create = () => {
                     onChange={handleInputChange} />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }} >GỬI</Button>
+                  <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }} onClick={alert('Success!!')}>GỬI</Button>
                 </Grid>
 
               </Grid>
