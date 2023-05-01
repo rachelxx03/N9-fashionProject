@@ -23,6 +23,45 @@ const Create = () => {
     });
   };
 
+  const savePost = () => {
+    // validate input here
+    if(!formData.author){
+      alert('Hãy nhập tên tác giả!!!')
+    }
+    if(!formData.title){
+      alert('Hãy nhập tiêu đề!!!')
+    }
+    if(!formData.content){
+      alert('Hãy nhập nội dung của bạn!!!')
+    }
+
+    // create form data
+    var bodyFormData = new FormData();
+    bodyFormData.append('author', formData.author);
+    bodyFormData.append('title', formData.title);
+    bodyFormData.append('content', formData.content);
+
+    // call save api 
+
+    axios({
+      method: "post",
+      url: "http://127.0.0.1:8000/api/posts",
+      data: bodyFormData,
+      headers: { "Content-Type": "multipart/form-data" },
+    }).then(function (response) {
+        //handle success / if success
+        alert("Cảm ơn bạn đã đóng góp!!!");
+
+      }).catch(function (response) {
+        //handle error / if error
+        alert("error");
+      });
+    
+
+
+    console.log("hello ", bodyFormData);
+  } 
+
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post('http://127.0.0.1:8000/api/posts', formData)
@@ -93,7 +132,7 @@ const Create = () => {
                     onChange={handleInputChange} />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }} onClick={alert('Success!!')}>GỬI</Button>
+                  <Button type="button" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }} onClick={savePost}>GỬI</Button>
                 </Grid>
 
               </Grid>
