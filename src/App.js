@@ -122,9 +122,10 @@ function App() {
 
               >
                 <div
-                  className="navop">
-                  <a href="/N9-fashionProject/trend" style={{color:"white", textDecorationLine:"none",}}> XU HƯỚNG</a>
-                  </div>
+                  className="navop"
+
+
+                >XU HƯỚNG</div>
 
 
 
@@ -161,9 +162,9 @@ function App() {
 
               >
                 <div
-                  className="navop">
-                    <a href="/N9-fashionProject/outlook" style={{color:"white", textDecorationLine:"none",}}>GÓC NHÌN</a>
-                    </div>
+                  className="navop"
+
+                >GÓC NHÌN</div>
 
 
 

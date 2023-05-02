@@ -42,66 +42,26 @@ const Admin = () => {
             // });
         }
     };
-    const savePost = () => {
-        // validate input here
-        if(!formData.catagory){
-          alert('Hãy chọn nơi đăng!!!')
-        }
-        if(!formData.title){
-          alert('Hãy nhập tiêu đề!!!')
-        }
-        if(!formData.subtitle){
-          alert('Hãy nhập mô tả!!!')
-        }
-        if(!formData.imag){
-            alert('Hãy chèn ảnh !!!')
-        }
-        if(!formData.mainContent){
-            alert('Hãy điền nội dung của bạn!!')
-        }
-    
-        // create form data
-        var bodyFormData = new FormData();
-        bodyFormData.append('catagory', formData.catagory);
-        bodyFormData.append('title', formData.title);
-        bodyFormData.append('subtitle', formData.subtitle);
-        bodyFormData.append('imag', formData.image);
-        bodyFormData.append('maincontent', formData.maincontent);
-        // call save api 
-    
-        axios({
-          method: "post",
-          url: "http://127.0.0.1:8000/api/posts",
-          data: bodyFormData,
-          headers: { "Content-Type": "multipart/form-data" },
-        }).then(function (response) {
-            //handle success / if success
-            alert("Đăng bài thành công!!!");
-    
-          }).catch(function (response) {
-            //handle error / if error
-            alert("error");
-          });
-        
-    
-    
-        console.log("hello ", bodyFormData);
-      } 
-    
-      const handleSubmit = (event) => {
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://127.0.0.1:8000/api/posts', formData)
-        .then(response => {
-            console.log(response);
-            console.log(formData)
-            // Do something with the response, like show a success message
-          })
-          .catch(error => {
-            console.log(error);
-            // Handle the error, like showing an error message
-          });
-      };
-    
+        delete formData.undefined
+        axios.post('http://127.0.0.1:8000/api/postContent', formData)
+            .then(response => {
+                console.log(response);
+                console.log( formData)
+                // Do something with the response, like show a success message
+            })
+            .catch(error => {
+                console.log(error);
+                // Handle the error, like showing an error message
+            });
+    };
+
+
+
+
+
     return (
         <div className="App" style={{ paddingTop: "2rem" }}>
 
@@ -188,7 +148,7 @@ const Admin = () => {
                                         onChange={handleInputChange} />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }} onClick={savePost} >GỬI</Button>
+                                    <Button type="submit" variant="contained" color="primary" style={{ backgroundColor: "#E74C8E" }}  >GỬI</Button>
                                 </Grid>
 
 
