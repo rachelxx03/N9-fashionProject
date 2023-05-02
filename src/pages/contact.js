@@ -28,8 +28,10 @@ const Create = () => {
     axios.post('http://127.0.0.1:8000/api/posts', formData)
     .then(response => {
         console.log(response);
-        console.log(formData)
-        // Do something with the response, like show a success message
+        console.log(formData);
+        alert('Hello, world!');
+
+
       })
       .catch(error => {
         console.log(error);
