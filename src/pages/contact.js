@@ -29,7 +29,9 @@ const Create = () => {
     .then(response => {
         console.log(response);
         console.log(formData);
-        alert('Hello, world!');
+        alert('thành công gửi đi');
+        window.location.href = window.location.href; // Reload the current page
+
 
 
       })

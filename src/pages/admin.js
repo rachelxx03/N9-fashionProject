@@ -50,6 +50,8 @@ const Admin = () => {
             .then(response => {
                 console.log(response);
                 console.log( formData)
+                alert('thành công gửi đi');
+                window.location.href = window.location.href; // Reload the current page
                 // Do something with the response, like show a success message
             })
             .catch(error => {
