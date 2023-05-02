@@ -13,27 +13,22 @@ import WhiteTwitter from "../image/whiteTwitter.png"
 import { AppBar, Typography, Toolbar, Box, Grid, IconButton } from '@mui/material';
 import React from "react";
 import { margin } from "@mui/system";
-import { Link,useNavigate } from 'react-router-dom';
 import '../App.css';
-import { useState, useEffect } from 'react';
 
 
 
 
 function NavigationBar() {
     const links = [
-        { navId: "menu", name: 'TRANG CHỦ', url: '/N9-fashionProject' },
-        { navId: "xuhuong", name: 'XU HƯỚNG', url: '/N9-fashionProject/trend' },
-        { navId: "gocnhin", name: 'GÓC NHÌN', url: '/N9-fashionProject/outlook' },
-        { navId: "lienhe", name: 'LIÊN HỆ / ĐÓNG GÓP', url: '/N9-fashionProject/contact' },
+        { navId:"" ,name: 'TRANG CHỦ', url: '/' },
+        { navId:"" ,name: 'XU HƯỚNG', url: '/about' },
+        { navId:"" ,name: 'GÓC NHÌN', url: '/contact' },
+        { navId:"" ,name: 'LIÊN HỆ / ĐÓNG GÓP', url: '/contact' },
+
+
     ];
 
-    const [selectedLink, setSelectedLink] = useState('TRANG CHỦ');
-    const navigate = useNavigate();
-    const handleLinkClick = (link) => {
-        setSelectedLink(link);
-        navigate(link.url);
-    };
+
     const linksContacts = [
         { picture: Instagram, content: '@N9blogfashion' },
         { picture: Phone, content: '+1667 987 662' },
@@ -132,22 +127,17 @@ function NavigationBar() {
                                         marginRight: "2rem"
                                     }}
                                 >
-                                    <Link
-                                className={`navigation ${selectedLink === link.name ? 'active' : ''}`}
-                                to={link.url}
-                                style={{
-                                    fontSize: '1.3rem',
-                                    color: 'white',
-                                    fontWeight: 'bold',
-                                    backgroundColor:'black',
-                                }}
+                                    <button
+                                        className="footer"
+                                        style={{
+                                            fontSize: "1.3rem",
+                                            color: "white",
+                                            fontWeight: "bold",
+                                            backgroundColor: "black"
 
-                                onClick={() => handleLinkClick(link.name)}
-                            >
-                                {link.name}
 
-                            </Link>
-
+                                        }}
+                                        href={link.url}>   {link.name}    </button>
                                 </li>
                             ))}
                         </ul>
